@@ -1,26 +1,32 @@
         body {
             background-color: #0000FF; /* A trendy dark gray hex code */
-            color: white;             /* Makes the text readable on dark background */
-        }
-
-    /* Reset and page styling */
-    body {
-    
-    }
-
-    /* 1. The Gallery Grid Wrapper */
+                    color: white;
+font-family: Arial, sans-serif;
+  margin: 40px;
+                }
+                h1 {
+  color: #ffdd00;
+  text-align: center;
+                }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      gap: 70px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
+    #welcome {
+      background-color: #000000;
+      color: #ffdd00;
+      font-size: 80px;
+      font-style: italic;
+      text-align: center;
+    }
     /* 2. Individual Gallery Item Boxes */
     .gallery-item {
       background-color: #fff;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease-in-out;
@@ -28,7 +34,7 @@
 
     /* Hover effect */
     .gallery-item:hover {
-      transform: scale(1.03);
+      transform: scale(1.5);
     }
 
     /* 3. Image Styling */
@@ -46,3 +52,58 @@
       font-size: 14px;
       color: #555;
     }
+#introduction {
+  color: #fdca00;
+  text-align: center;
+  border: 2px solid #fdca00;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdefbb;
+  font-family: Arial, sans-serif;
+  margin: 50px;
+}
+.yellow.background {
+  background-color: #ffdd00;
+  border: 5px solid #000000;
+  color: #000;
+  font-size: 45px;
+  padding: 15px;
+}
+
+.farewell.outro {
+  background-color: #ffdd00;
+  border: 5px solid #000000;
+  color: #000;
+  font-size: 25px;
+  padding: 15px;
+  text-align: center;
+  align-items: end
+}
+
+.list {
+  color: #ffdd00;
+  font-size: 35px;
+  padding: 15px;
+ 
+}
+
+.outro.image {
+width: 350%;
+}
+
+.gallery-item {
+  width: 350px;
+  height: 350px;
+  padding: 10px;
+  border: 2px solid #000;
+  background-color: #ffdd00;
+  margin: 10px;
+}
+
+.nfl { 
+  background-color: #ffffff;
+  color: #ffdd00;
+  font-size: 25px;
+  padding: 15px;
+  text-align: center;
+}
