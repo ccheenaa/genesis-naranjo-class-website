@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Grail Layout with CSS Grid</title>
+  <style>
+    html, body {
+      margin: 20px;
+      padding: 20px;
+      height: 100vh;
+    }
+
+    .grid-container {
+      display: grid;
+      height: 100vh;
+      /* Rows: header auto, center columns take remaining space (1fr), footer auto */
+      grid-template-rows: auto 1fr auto;
+      /* Columns: Left sidebar (200px), Main content (fluid), Right sidebar (200px) */
+      grid-template-columns: 200px 1fr 200px;
+      /* Define the grid map layout */
+      grid-template-areas: 
+        "header header header"
+        "nav    main   aside"
+        "footer footer footer";
+    }
+
+    /* Assigning Grid Areas to Elements */
+    header {
+      grid-area: header;
+      background-color: #3a86ff;
+      color: white;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: #e0f2fe;
+    }
+
+    main {
+      grid-area: main;
+      background-color: #f8fafc;
+      overflow-y: auto; /* Independent scrolling for main content */
+    }
+
+    aside {
+      grid-area: aside;
+      background-color: #ff006e;
+      color: white;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #212529;
+      color: white;
+    }
+
+    /* Shared placeholder styling for presentation */
+    .grid-container > * {
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Responsive adjustments for mobile screens */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "header"
+          "nav"
+          "main"
+          "aside"
+          "footer";
+      }
+      
+      main {
+        overflow-y: visible;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <header>Header Section</header>
+    <nav>Navigation Sidebar (Left)</nav>
+    <main>Main Content Area</main>
+    <aside>Promo Sidebar (Right)</aside>
+    <footer>Footer Section</footer>
+  </div>
+
+</body>
+</html>
