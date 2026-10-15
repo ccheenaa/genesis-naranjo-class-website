@@ -1,15 +1,17 @@
+
 const button = document.querySelector("#button");
+const counter = document.querySelector("#counter");
 
-function changeButton() {
-    button.style.backgroundColor = "pink";
+let clicks = 0;
+
+function countClicks() {
+    clicks = clicks + 1;
+
+    if (clicks === 1) {
+        counter.textContent = "You've clicked 1 time!";
+    } else {
+        counter.textContent = "You've clicked " + clicks + " times!";
+    }
 }
 
-button.addEventListener("click", changeButton);
-
-const message = document.querySelector("#message");
-
-function changeMessage() {
-    message.textContent = "Why did you click the button?";
-}
-
-button.addEventListener("click", changeMessage);
+button.addEventListener("click", countClicks);

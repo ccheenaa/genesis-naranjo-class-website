@@ -33,9 +33,9 @@ font-family: Arial, sans-serif;
     }
 
     /* Hover effect */
-    .gallery-item:hover {
-      transform: scale(1.5);
-    }
+   .gallery-item:hover {
+    transform: scale(1.03);
+}
 
     /* 3. Image Styling */
     .gallery-item img {
@@ -53,14 +53,14 @@ font-family: Arial, sans-serif;
       color: #555;
     }
 #introduction {
-  color: #fdca00;
-  text-align: center;
-  border: 2px solid #fdca00;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #fdefbb;
-  font-family: Arial, sans-serif;
-  margin: 50px;
+    color: #000000;
+    text-align: center;
+    border: 2px solid #fdca00;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fdefbb;
+    font-family: Arial, sans-serif;
+    margin: 30px;
 }
 .yellow.background {
   background-color: #ffdd00;
@@ -88,7 +88,13 @@ font-family: Arial, sans-serif;
 }
 
 .outro.image {
-width: 350%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.outro.image img {
+    max-width: 75%;
+    height: auto;
 }
 
 .gallery-item {
@@ -106,4 +112,80 @@ width: 350%;
   font-size: 25px;
   padding: 15px;
   text-align: center;
+}
+
+
+button {
+    background-color: #ffdd00;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+#counter {
+    color: #ffdd00;
+    text-align: center;
+    font-size: 28px;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 15px;
+    }
+
+    #welcome {
+        font-size: 40px;
+    }
+
+    .yellow.background {
+        font-size: 22px;
+    }
+
+    .list {
+        font-size: 22px;
+    }
+
+    .gallery {
+        gap: 20px;
+    }
+
+    .gallery-item {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .gallery-item img {
+        max-width: 100%;
+    }
+
+    #introduction {
+        margin: 15px 0;
+    }
+}
+
+
+.audio-player {
+    background-color: #ffdd00;
+    color: #000000;
+    padding: 20px;
+    margin: 25px auto;
+    text-align: center;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.audio-player audio {
+    width: 100%;
+    max-width: 400px;
 }
